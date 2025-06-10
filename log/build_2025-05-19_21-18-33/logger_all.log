@@ -1,0 +1,219 @@
+[0.174s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.174s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7480b7c5ebc0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7480b7d7bb20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7480b7d7bb20>>, mixin_verb=('build',))
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.406s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/xianyu/ws_arm'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extension 'ignore_ament_install'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extensions ['colcon_pkg']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extension 'colcon_pkg'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extensions ['colcon_meta']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extension 'colcon_meta'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extensions ['ros']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_arm) by extension 'ros'
+[0.442s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_arm' with type 'ros.ament_cmake' and name 'moveit_arm'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extension 'ignore'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extension 'ignore_ament_install'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extensions ['colcon_pkg']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extension 'colcon_pkg'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extensions ['colcon_meta']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extension 'colcon_meta'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extensions ['ros']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_arm) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simple_arm' with type 'ros.ament_cmake' and name 'simple_arm'
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.470s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.470s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.472s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/xianyu/ws_arm/install
+[0.474s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 418 installed packages in /opt/ros/humble
+[0.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.541s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'simple_arm' is in: /home/xianyu/ws_arm/install/simple_arm
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding simple_arm
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'cmake_target' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'cmake_clean_first' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'cmake_force_configure' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'ament_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'simple_arm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.543s] DEBUG:colcon.colcon_core.verb:Building package 'simple_arm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xianyu/ws_arm/build/simple_arm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xianyu/ws_arm/install/simple_arm', 'merge_install': False, 'path': '/home/xianyu/ws_arm/src/simple_arm', 'symlink_install': False, 'test_result_base': None}
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'moveit_arm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.544s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_arm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xianyu/ws_arm/build/moveit_arm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xianyu/ws_arm/install/moveit_arm', 'merge_install': False, 'path': '/home/xianyu/ws_arm/src/moveit_arm', 'symlink_install': False, 'test_result_base': None}
+[0.544s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.545s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.546s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xianyu/ws_arm/src/simple_arm' with build type 'ament_cmake'
+[0.546s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xianyu/ws_arm/src/simple_arm'
+[0.548s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.549s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.549s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xianyu/ws_arm/build/simple_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/simple_arm -- -j8 -l8
+[0.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xianyu/ws_arm/build/simple_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/simple_arm -- -j8 -l8
+[0.627s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xianyu/ws_arm/build/simple_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/simple_arm
+[0.640s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simple_arm)
+[0.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xianyu/ws_arm/build/simple_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/simple_arm
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm' for CMake module files
+[0.645s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm' for CMake config files
+[0.645s] Level 1:colcon.colcon_core.shell:create_environment_hook('simple_arm', 'cmake_prefix_path')
+[0.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/hook/cmake_prefix_path.ps1'
+[0.646s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/hook/cmake_prefix_path.dsv'
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/hook/cmake_prefix_path.sh'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/bin'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/lib/pkgconfig/simple_arm.pc'
+[0.650s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/lib/python3.10/site-packages'
+[0.652s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/bin'
+[0.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.ps1'
+[0.655s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.dsv'
+[0.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.sh'
+[0.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.bash'
+[0.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.zsh'
+[0.659s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xianyu/ws_arm/install/simple_arm/share/colcon-core/packages/simple_arm)
+[0.661s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simple_arm)
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm' for CMake module files
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm' for CMake config files
+[0.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('simple_arm', 'cmake_prefix_path')
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/hook/cmake_prefix_path.ps1'
+[0.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/hook/cmake_prefix_path.dsv'
+[0.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/hook/cmake_prefix_path.sh'
+[0.668s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/bin'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/lib/pkgconfig/simple_arm.pc'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/lib/python3.10/site-packages'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/simple_arm/bin'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.ps1'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.dsv'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.sh'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.bash'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/simple_arm/share/simple_arm/package.zsh'
+[0.675s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xianyu/ws_arm/install/simple_arm/share/colcon-core/packages/simple_arm)
+[0.675s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xianyu/ws_arm/src/moveit_arm' with build type 'ament_cmake'
+[0.676s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xianyu/ws_arm/src/moveit_arm'
+[0.676s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.676s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xianyu/ws_arm/build/moveit_arm': CMAKE_PREFIX_PATH=/home/xianyu/ws_arm/install/simple_arm:/home/xianyu/ws_arm/install/my_arm:/home/xianyu/ws_arm/install/moveit_arm:/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/moveit_arm -- -j8 -l8
+[0.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xianyu/ws_arm/build/moveit_arm' returned '0': CMAKE_PREFIX_PATH=/home/xianyu/ws_arm/install/simple_arm:/home/xianyu/ws_arm/install/my_arm:/home/xianyu/ws_arm/install/moveit_arm:/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/moveit_arm -- -j8 -l8
+[0.740s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xianyu/ws_arm/build/moveit_arm': CMAKE_PREFIX_PATH=/home/xianyu/ws_arm/install/simple_arm:/home/xianyu/ws_arm/install/my_arm:/home/xianyu/ws_arm/install/moveit_arm:/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/moveit_arm
+[0.756s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_arm)
+[0.756s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm' for CMake module files
+[0.757s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xianyu/ws_arm/build/moveit_arm' returned '0': CMAKE_PREFIX_PATH=/home/xianyu/ws_arm/install/simple_arm:/home/xianyu/ws_arm/install/my_arm:/home/xianyu/ws_arm/install/moveit_arm:/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/moveit_arm
+[0.757s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm' for CMake config files
+[0.758s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_arm', 'cmake_prefix_path')
+[0.758s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/hook/cmake_prefix_path.ps1'
+[0.759s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/hook/cmake_prefix_path.dsv'
+[0.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/hook/cmake_prefix_path.sh'
+[0.761s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/bin'
+[0.762s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/lib/pkgconfig/moveit_arm.pc'
+[0.764s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/lib/python3.10/site-packages'
+[0.764s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/bin'
+[0.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.ps1'
+[0.767s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.dsv'
+[0.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.sh'
+[0.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.bash'
+[0.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.zsh'
+[0.774s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xianyu/ws_arm/install/moveit_arm/share/colcon-core/packages/moveit_arm)
+[0.775s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_arm)
+[0.776s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm' for CMake module files
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm' for CMake config files
+[0.779s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_arm', 'cmake_prefix_path')
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/hook/cmake_prefix_path.ps1'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/hook/cmake_prefix_path.dsv'
+[0.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/hook/cmake_prefix_path.sh'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/bin'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/lib/pkgconfig/moveit_arm.pc'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/lib/python3.10/site-packages'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/xianyu/ws_arm/install/moveit_arm/bin'
+[0.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.ps1'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.dsv'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.sh'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.bash'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/xianyu/ws_arm/install/moveit_arm/share/moveit_arm/package.zsh'
+[0.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xianyu/ws_arm/install/moveit_arm/share/colcon-core/packages/moveit_arm)
+[0.789s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.789s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.789s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.789s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.801s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.801s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.801s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.820s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.820s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xianyu/ws_arm/install/local_setup.ps1'
+[0.822s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xianyu/ws_arm/install/_local_setup_util_ps1.py'
+[0.824s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xianyu/ws_arm/install/setup.ps1'
+[0.829s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xianyu/ws_arm/install/local_setup.sh'
+[0.830s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xianyu/ws_arm/install/_local_setup_util_sh.py'
+[0.831s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xianyu/ws_arm/install/setup.sh'
+[0.833s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xianyu/ws_arm/install/local_setup.bash'
+[0.834s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xianyu/ws_arm/install/setup.bash'
+[0.835s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xianyu/ws_arm/install/local_setup.zsh'
+[0.836s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xianyu/ws_arm/install/setup.zsh'

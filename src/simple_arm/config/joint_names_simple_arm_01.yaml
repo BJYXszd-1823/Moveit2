@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'yaw_link', 'p1_link', 'p2_link', 'roll_link', 'minip_link', 'minir_link', ]

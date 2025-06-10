@@ -1,0 +1,16 @@
+# moveit_controllers.yaml
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - my_group_controller  # 与 ros2_controllers.yaml 一致
+
+  my_group_controller:  # 控制器名称统一
+    type: FollowJointTrajectory
+    joints:
+      - yaw_link
+      - p1_link
+      - p2_link
+      - roll_link
+      - minip_link
+      - minir_link

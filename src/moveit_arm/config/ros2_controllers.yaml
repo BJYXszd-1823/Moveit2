@@ -1,0 +1,27 @@
+# 修正后的 ros2_controllers.yaml
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # 控制器更新频率（Hz）
+    
+    # 必需：关节状态广播器（发布关节状态到 /joint_states）
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      parameters:
+        publish_rate: 50  # 发布频率
+    
+    # 自定义控制器（名称需与命令行一致，如 my_group_controller）
+    my_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      parameters:
+        joints:
+          - yaw_link
+          - p1_link
+          - p2_link
+          - roll_link
+          - minip_link
+          - minir_link
+        command_interfaces:
+          - position
+        state_interfaces:
+          - position
+          - velocity

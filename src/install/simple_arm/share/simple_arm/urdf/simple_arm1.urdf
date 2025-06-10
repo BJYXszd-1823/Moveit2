@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="simple_arm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.029123 -0.033706 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.029196" />
+      <inertia
+        ixx="2.633E-05"
+        ixy="-2.4057E-05"
+        ixz="1.1298E-21"
+        iyy="5.0719E-05"
+        iyz="9.4342E-23"
+        izz="7.6562E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="yaw_Link">
+    <inertial>
+      <origin
+        xyz="6.261E-09 0.012156 0.053426"
+        rpy="0 0 0" />
+      <mass
+        value="0.35416" />
+      <inertia
+        ixx="0.00052105"
+        ixy="5.0927E-11"
+        ixz="-7.5303E-12"
+        iyy="0.00043693"
+        iyz="4.6383E-07"
+        izz="0.00024205" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="yaw_link"
+    type="revolute">
+    <origin
+      xyz="0 0 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="yaw_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="P1_Link">
+    <inertial>
+      <origin
+        xyz="0.18397 0 0.056283"
+        rpy="0 0 0" />
+      <mass
+        value="0.68023" />
+      <inertia
+        ixx="0.00023225"
+        ixy="6.1316E-19"
+        ixz="0.00042211"
+        iyy="0.0087926"
+        iyz="-3.659E-20"
+        izz="0.0088447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/P1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/P1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p1_link"
+    type="revolute">
+    <origin
+      xyz="0 0 0.091"
+      rpy="1.5751 -0.087162 3.0926" />
+    <parent
+      link="yaw_Link" />
+    <child
+      link="P1_Link" />
+    <axis
+      xyz="0.048837 0 0.99881" />
+    <limit
+      lower="0"
+      upper="2"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="P2_Link">
+    <inertial>
+      <origin
+        xyz="0.093579 0 6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.61758" />
+      <inertia
+        ixx="0.00031766"
+        ixy="8.8091E-20"
+        ixz="-7.147E-20"
+        iyy="0.0023843"
+        iyz="-1.4344E-20"
+        izz="0.002331" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/P2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/P2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p2_link"
+    type="revolute">
+    <origin
+      xyz="0.36243 0 0"
+      rpy="0.0084903 -0.048113 2.9669" />
+    <parent
+      link="P1_Link" />
+    <child
+      link="P2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Roll_Link">
+    <inertial>
+      <origin
+        xyz="-0.0042914 1.4286E-05 0.13539"
+        rpy="0 0 0" />
+      <mass
+        value="0.27489" />
+      <inertia
+        ixx="0.0018909"
+        ixy="1.3975E-07"
+        ixz="0.0001294"
+        iyy="0.0019259"
+        iyz="-4.3042E-07"
+        izz="8.0038E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/Roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/Roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_link"
+    type="revolute">
+    <origin
+      xyz="0.194 0 0"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="P2_Link" />
+    <child
+      link="Roll_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Minip_Link">
+    <inertial>
+      <origin
+        xyz="0.025369 2.7756E-17 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.02542" />
+      <inertia
+        ixx="8.1208E-06"
+        ixy="8.9997E-22"
+        ixz="-2.9573E-21"
+        iyy="7.4031E-06"
+        iyz="-4.8817E-23"
+        izz="5.8203E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/Minip_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/Minip_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="minip_link"
+    type="revolute">
+    <origin
+      xyz="-0.042 0 0.245"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Roll_Link" />
+    <child
+      link="Minip_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Minir_Link">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 1.3878E-17 0.040916"
+        rpy="0 0 0" />
+      <mass
+        value="0.061635" />
+      <inertia
+        ixx="3.436E-05"
+        ixy="2.978E-22"
+        ixz="-4.2881E-21"
+        iyy="3.4758E-05"
+        iyz="-2.1346E-21"
+        izz="1.0943E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/Minir_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find simple_arm)/meshes/Minir_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="minir_link"
+    type="revolute">
+    <origin
+      xyz="0.035 0 0"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="Minip_Link" />
+    <child
+      link="Minir_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

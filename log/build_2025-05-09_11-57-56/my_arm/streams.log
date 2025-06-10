@@ -1,0 +1,58 @@
+[0.005s] Invoking command in '/home/xianyu/ws_arm/build/my_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xianyu/ws_arm/src/my_arm -DCMAKE_INSTALL_PREFIX=/home/xianyu/ws_arm/install/my_arm
+[0.122s] -- The C compiler identification is GNU 11.4.0
+[0.232s] -- The CXX compiler identification is GNU 11.4.0
+[0.246s] -- Detecting C compiler ABI info
+[0.321s] -- Detecting C compiler ABI info - done
+[0.329s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.329s] -- Detecting C compile features
+[0.329s] -- Detecting C compile features - done
+[0.332s] -- Detecting CXX compiler ABI info
+[0.411s] -- Detecting CXX compiler ABI info - done
+[0.419s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.419s] -- Detecting CXX compile features
+[0.420s] -- Detecting CXX compile features - done
+[0.423s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.550s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.667s] -- Configuring done
+[0.668s] -- Generating done
+[0.669s] -- Build files have been written to: /home/xianyu/ws_arm/build/my_arm
+[0.672s] Invoked command in '/home/xianyu/ws_arm/build/my_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xianyu/ws_arm/src/my_arm -DCMAKE_INSTALL_PREFIX=/home/xianyu/ws_arm/install/my_arm
+[0.673s] Invoking command in '/home/xianyu/ws_arm/build/my_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/my_arm -- -j16 -l16
+[0.699s] Invoked command in '/home/xianyu/ws_arm/build/my_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/my_arm -- -j16 -l16
+[0.700s] Invoking command in '/home/xianyu/ws_arm/build/my_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/my_arm
+[0.706s] -- Install configuration: ""
+[0.706s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/ament_index/resource_index/package_run_dependencies/my_arm
+[0.706s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/ament_index/resource_index/parent_prefix_path/my_arm
+[0.706s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/environment/ament_prefix_path.sh
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/environment/ament_prefix_path.dsv
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/environment/path.sh
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/environment/path.dsv
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/local_setup.bash
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/local_setup.sh
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/local_setup.zsh
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/local_setup.dsv
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/package.dsv
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/ament_index/resource_index/packages/my_arm
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/cmake/my_armConfig.cmake
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/cmake/my_armConfig-version.cmake
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/package.xml
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/demo.launch.py
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/moveit_rviz.launch.py
+[0.707s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/warehouse_db.launch.py
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/static_virtual_joint_tfs.launch.py
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/move_group.launch.py
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/rsp.launch.py
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/setup_assistant.launch.py
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/launch/spawn_controllers.launch.py
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/simple_arm.ros2_control.xacro
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/moveit.rviz
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/simple_arm.urdf.xacro
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/pilz_cartesian_limits.yaml
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/initial_positions.yaml
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/joint_limits.yaml
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/simple_arm.srdf
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/config/kinematics.yaml
+[0.708s] -- Installing: /home/xianyu/ws_arm/install/my_arm/share/my_arm/.setup_assistant
+[0.709s] Invoked command in '/home/xianyu/ws_arm/build/my_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/my_arm

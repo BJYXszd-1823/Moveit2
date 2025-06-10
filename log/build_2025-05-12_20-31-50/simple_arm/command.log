@@ -1,0 +1,4 @@
+Invoking command in '/home/xianyu/ws_arm/build/simple_arm': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/simple_arm -- -j16 -l16
+Invoked command in '/home/xianyu/ws_arm/build/simple_arm' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xianyu/ws_arm/build/simple_arm -- -j16 -l16
+Invoking command in '/home/xianyu/ws_arm/build/simple_arm': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/simple_arm
+Invoked command in '/home/xianyu/ws_arm/build/simple_arm' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/xianyu/ws_arm/build/simple_arm

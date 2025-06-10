@@ -1,0 +1,9 @@
+# Default initial positions for simple_arm's ros2_control fake system
+
+initial_positions:
+  minip_link: 0
+  minir_link: 0
+  p1_link: 0
+  p2_link: 0
+  roll_link: 0
+  yaw_link: 0
