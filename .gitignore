@@ -1,0 +1,9 @@
+
+.vscode/
+build/
+install/
+log/
+rlogs/
+
+*.log
+*.code-workspace

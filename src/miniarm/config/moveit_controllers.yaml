@@ -4,9 +4,9 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 
 moveit_simple_controller_manager:
   controller_names:
-    - test_controller
+    - Plan1_controller
 
-  test_controller:
+  Plan1_controller:
     type: FollowJointTrajectory
     joints:
       - yaw_link

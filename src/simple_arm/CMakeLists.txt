@@ -5,7 +5,7 @@ project(simple_arm)
 find_package(ament_cmake REQUIRED)
 
 install(
-	DIRECTORY images launch meshes rviz urdf
+	DIRECTORY launch meshes rviz urdf
   	DESTINATION share/${PROJECT_NAME}
 )
 

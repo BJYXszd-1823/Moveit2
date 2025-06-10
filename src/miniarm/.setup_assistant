@@ -1,13 +1,13 @@
 moveit_setup_assistant_config:
   urdf:
     package: simple_arm
-    relative_path: urdf/simple_arm.urdf
+    relative_path: urdf/miniarm.urdf
   srdf:
     relative_path: config/simple_arm.srdf
   package_settings:
-    author_name: my
-    author_email: my@qq.com
-    generated_timestamp: 1749575067
+    author_name: liaowj5
+    author_email: liaowj5@foxmail.com
+    generated_timestamp: 1749652357
   control_xacro:
     command:
       - position
