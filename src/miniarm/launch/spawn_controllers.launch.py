@@ -3,5 +3,5 @@ from moveit_configs_utils.launches import generate_spawn_controllers_launch
 
 
 def generate_launch_description():
-    moveit_config = MoveItConfigsBuilder("simple_arm", package_name="miniarm").to_moveit_configs()
+    moveit_config = MoveItConfigsBuilder("miniarm", package_name="miniarm").to_moveit_configs()
     return generate_spawn_controllers_launch(moveit_config)

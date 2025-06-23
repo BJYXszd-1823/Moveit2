@@ -1,4 +1,4 @@
-# Default initial positions for simple_arm's ros2_control fake system
+# Default initial positions for miniarm's ros2_control fake system
 
 initial_positions:
   minip_link: 0

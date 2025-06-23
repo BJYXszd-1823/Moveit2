@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- 对一些link进行gazebo属性设置 -->
+    <gazebo reference="yaw_link">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo reference="p1_link">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo reference="p2_link">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo reference="roll_link">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo reference="minip_link">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo reference="minir_link">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <!-- 无法设置静态？试试 -->
+    <gazebo>
+        <static>true</static>
+        <self_collide>true</self_collide>
+    </gazebo>
+
+</robot>
