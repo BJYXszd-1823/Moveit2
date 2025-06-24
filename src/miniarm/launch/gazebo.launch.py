@@ -15,7 +15,9 @@ from moveit_configs_utils.launch_utils import (
 )
 
 import xacro
-
+import rclpy
+from trajectory_msgs.msg import JointTrajectoryPoint
+from moveit_msgs.msg import DisplayTrajectory
 import re
 def remove_comments(text):
     pattern = r'<!--(.*?)-->'
@@ -42,7 +44,7 @@ def generate_launch_description():
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'use_sim_time': False}, params, {"publish_frequency":15.0}],
+        parameters=[{'use_sim_time': True}, params, {"publish_frequency":15.0}],
         output='screen'
     )
     ld.add_action(node_robot_state_publisher)
@@ -52,6 +54,12 @@ def generate_launch_description():
                                    '-entity', f'{robot}'], 
                         output='screen')
     ld.add_action(spawn_entity)
+
+    node_sub = ExecuteProcess(
+        cmd=['ros2', 'run', 'miniarm_mod', 'trajectory_subscriber'],
+        output='screen'
+    )
+    ld.add_action(node_sub)
 
     # 关节状态发布器
     load_joint_state_controller = ExecuteProcess(
@@ -107,6 +115,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(
                 os.path.join(pkg_share,f'launch/move_group.launch.py')
             ),
+            launch_arguments={"allow_trajectory_execution": 'true'}.items(),
         )
     )
 
