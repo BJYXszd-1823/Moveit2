@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 # moveit_controllers.yaml
+=======
+# MoveIt uses this configuration for controller management
+
+>>>>>>> 23d5ed4 (添加串口逻辑)
 moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
 
 moveit_simple_controller_manager:
   controller_names:
+<<<<<<< HEAD
     - my_group_controller  # 与 ros2_controllers.yaml 一致
 
   my_group_controller:  # 控制器名称统一
+=======
+    - test_controller
+
+  test_controller:
+>>>>>>> 23d5ed4 (添加串口逻辑)
     type: FollowJointTrajectory
     joints:
       - yaw_link
@@ -13,4 +24,8 @@ moveit_simple_controller_manager:
       - p2_link
       - roll_link
       - minip_link
+<<<<<<< HEAD
       - minir_link
+=======
+      - minir_link
+>>>>>>> 23d5ed4 (添加串口逻辑)

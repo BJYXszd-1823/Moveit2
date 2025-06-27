@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 修正后的 ros2_controllers.yaml
 controller_manager:
   ros__parameters:
@@ -25,3 +26,31 @@ controller_manager:
         state_interfaces:
           - position
           - velocity
+=======
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    test_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+test_controller:
+  ros__parameters:
+    joints:
+      - yaw_link
+      - p1_link
+      - p2_link
+      - roll_link
+      - minip_link
+      - minir_link
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+>>>>>>> 23d5ed4 (添加串口逻辑)
