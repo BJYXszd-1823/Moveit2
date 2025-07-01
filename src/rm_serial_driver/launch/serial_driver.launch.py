@@ -38,14 +38,15 @@ def generate_launch_description():
     )
 
     # 包含MoveIt的演示启动文件
-    # moveit_launch = IncludeLaunchDescription(
-    #     PythonLaunchDescriptionSource(
-    #         os.path.join(moveit_arm_dir, 'launch', 'demo.launch.py')
-    #     )
-    # )
+    moveit_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(moveit_arm_dir, 'launch', 'demo.launch.py')
+        )
+    )
 
     return LaunchDescription([
+        moveit_launch,
         rm_serial_driver_node,
-        rm_moveit_node
-        # moveit_launch  # 包含MoveIt演示启动文件
+        rm_moveit_node,
+          # 包含MoveIt演示启动文件
     ])

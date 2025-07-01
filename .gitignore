@@ -7,3 +7,4 @@ rlogs/
 
 *.log
 *.code-workspace
+*.tgz

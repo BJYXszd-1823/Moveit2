@@ -22,8 +22,8 @@ def generate_launch_description():
     robot_name_in_model = 'simple_arm'
 
     pkg_share = FindPackageShare(package=package_name).find(package_name) 
-    # urdf_model_path = os.path.join(pkg_share, f'config/gazebo_simple_arm.urdf.xacro')
-    urdf_model_path = '/home/xianyu/ws_arm/src/moveit_arm/config/gazebo_simple_arm.urdf.xacro'
+    urdf_model_path = os.path.join(pkg_share, f'config/gazebo_simple_arm.urdf.xacro')
+    #urdf_model_path = '/home/xianyu/ws_arm/src/moveit_arm/config/gazebo_simple_arm.urdf.xacro'
 
     
     print("---", urdf_model_path)
