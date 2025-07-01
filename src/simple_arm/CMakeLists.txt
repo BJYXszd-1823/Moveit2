@@ -5,11 +5,7 @@ project(simple_arm)
 find_package(ament_cmake REQUIRED)
 
 install(
-<<<<<<< HEAD
 	DIRECTORY images launch meshes rviz urdf
-=======
-	DIRECTORY launch meshes rviz urdf
->>>>>>> 23d5ed4 (添加串口逻辑)
   	DESTINATION share/${PROJECT_NAME}
 )
 

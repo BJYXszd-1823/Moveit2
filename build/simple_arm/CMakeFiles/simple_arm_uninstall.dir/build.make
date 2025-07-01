@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xianyu/ws_arm/src/simple_arm
+CMAKE_SOURCE_DIR = /home/xianyu/Moveit2/src/simple_arm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xianyu/ws_arm/build/simple_arm
+CMAKE_BINARY_DIR = /home/xianyu/Moveit2/build/simple_arm
 
 # Utility rule file for simple_arm_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/simple_arm_uninstall.dir/compiler_depend.make
 include CMakeFiles/simple_arm_uninstall.dir/progress.make
 
 CMakeFiles/simple_arm_uninstall:
-	/usr/bin/cmake -P /home/xianyu/ws_arm/build/simple_arm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/xianyu/Moveit2/build/simple_arm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 simple_arm_uninstall: CMakeFiles/simple_arm_uninstall
 simple_arm_uninstall: CMakeFiles/simple_arm_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/simple_arm_uninstall.dir/clean:
 .PHONY : CMakeFiles/simple_arm_uninstall.dir/clean
 
 CMakeFiles/simple_arm_uninstall.dir/depend:
-	cd /home/xianyu/ws_arm/build/simple_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xianyu/ws_arm/src/simple_arm /home/xianyu/ws_arm/src/simple_arm /home/xianyu/ws_arm/build/simple_arm /home/xianyu/ws_arm/build/simple_arm /home/xianyu/ws_arm/build/simple_arm/CMakeFiles/simple_arm_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xianyu/Moveit2/build/simple_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xianyu/Moveit2/src/simple_arm /home/xianyu/Moveit2/src/simple_arm /home/xianyu/Moveit2/build/simple_arm /home/xianyu/Moveit2/build/simple_arm /home/xianyu/Moveit2/build/simple_arm/CMakeFiles/simple_arm_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/simple_arm_uninstall.dir/depend
 

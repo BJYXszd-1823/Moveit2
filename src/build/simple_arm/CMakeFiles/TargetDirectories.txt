@@ -1,9 +1,0 @@
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/uninstall.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/simple_arm_uninstall.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/test.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/edit_cache.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/rebuild_cache.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/list_install_components.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/install.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/install/local.dir
-/home/xianyu/ws_arm/src/build/simple_arm/CMakeFiles/install/strip.dir

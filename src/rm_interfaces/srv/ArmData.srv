@@ -1,15 +1,12 @@
 # 请求部分
-# 关节角度数组，假设最多 6 个关节
-float32[] joint_angles
-
----
-
-# 响应部分
-# 位置信息
+# 位置部分
 float32 x
 float32 y
 float32 z
-# 欧拉角信息
+# 欧拉角
 float32 roll
 float32 pitch
 float32 yaw
+---
+bool success
+float32[] joint_angles

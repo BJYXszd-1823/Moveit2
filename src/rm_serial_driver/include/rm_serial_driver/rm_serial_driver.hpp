@@ -21,15 +21,18 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <mutex>
+#include <atomic>
  
 // #include "auto_aim_interfaces/msg/target.hpp"
 #include "rm_interfaces/srv/set_mode.hpp"
 #include "rm_interfaces/srv/arm_data.hpp"
 // #include "rm_interfaces/msg/low_computer.hpp"
 #include "rm_interfaces/msg/gimbal_cmd.hpp"
+#include "rm_serial_driver/packet.hpp"
 
 // moveit
-#include <moveit/move_group_interface/move_group_interface.h>
+// #include <moveit/move_group_interface/move_group_interface.h>
 
 namespace rm_serial_driver
 {
@@ -39,16 +42,6 @@ public:
   explicit RMSerialDriver(const rclcpp::NodeOptions & options);
 
   ~RMSerialDriver() override;
-
-    // Param client to set detect_color
-  struct SetModeClient {
-    SetModeClient(rclcpp::Client<rm_interfaces::srv::SetMode>::SharedPtr p) : ptr(p) {}
-    std::atomic<bool> on_waiting = false;
-    std::atomic<int> mode = 0;
-    rclcpp::Client<rm_interfaces::srv::SetMode>::SharedPtr ptr;
-  };
-  std::unordered_map<std::string, SetModeClient> set_mode_clients_;
-  void setMode(SetModeClient &client, const uint8_t mode);
 
   // ArmData
   struct SetArmClient
@@ -85,7 +78,7 @@ public:
   // 新增：服务服务器
   rclcpp::Service<rm_interfaces::srv::ArmData>::SharedPtr arm_data_server_;
 
-  void sendDataExchange(rm_interfaces::msg::GimbalCmd::SharedPtr msg);
+  // void sendDataExchange(rm_interfaces::msg::GimbalCmd::SharedPtr msg);
 
   // 服务回调函数声明
   void handleArmData(
@@ -96,7 +89,7 @@ public:
 
 private:
   // Moveit接口
-  std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group_;
+  // std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group_;
 
   void getParams();
 
@@ -108,7 +101,7 @@ private:
 
   void reopenPort();
 
-  void processReceivedData(const ReceivePacket& packet, rm_interfaces::msg::GimbalCmd::SharedPtr msg);
+  // void processReceivedData(const ReceivePacket& packet, rm_interfaces::msg::GimbalCmd::SharedPtr msg);
 
   std::vector<double> planTrajectory(const geometry_msgs::msg::Pose& target_pose);
 
@@ -141,11 +134,12 @@ private:
   geometry_msgs::msg::Pose start_pose_; //起始位姿
   geometry_msgs::msg::Pose current_pose_; //当前位姿
   bool moveit_enabled_ = false; //MoveIt启用标志
-  void setStartPose();  //设置起始位姿
+  // void setStartPose();  //设置起始位姿
   // void initMoveGroup(); //MoveGroup初始化
-  // std::mutex init_mutex_; // 新增：线程同步所需的互斥锁
-  // bool is_move_group_initialized_ = false; // 初始化标志位
-  // bool is_fully_constructed_ = false;
+  std::mutex init_mutex_; // 新增：线程同步所需的互斥锁
+  bool is_move_group_initialized_ = false; // 初始化标志位
+  bool is_fully_constructed_ = false;
+  std::once_flag init_flag_;  // 确保只初始化一次
 
 };
 }  // namespace rm_serial_driver

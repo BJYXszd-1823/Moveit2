@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xianyu/ws_arm/src/moveit_arm
+CMAKE_SOURCE_DIR = /home/xianyu/Moveit2/src/moveit_arm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xianyu/ws_arm/build/moveit_arm
+CMAKE_BINARY_DIR = /home/xianyu/Moveit2/build/moveit_arm
 
 # Utility rule file for moveit_arm_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/moveit_arm_uninstall.dir/compiler_depend.make
 include CMakeFiles/moveit_arm_uninstall.dir/progress.make
 
 CMakeFiles/moveit_arm_uninstall:
-	/usr/bin/cmake -P /home/xianyu/ws_arm/build/moveit_arm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/xianyu/Moveit2/build/moveit_arm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 moveit_arm_uninstall: CMakeFiles/moveit_arm_uninstall
 moveit_arm_uninstall: CMakeFiles/moveit_arm_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/moveit_arm_uninstall.dir/clean:
 .PHONY : CMakeFiles/moveit_arm_uninstall.dir/clean
 
 CMakeFiles/moveit_arm_uninstall.dir/depend:
-	cd /home/xianyu/ws_arm/build/moveit_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xianyu/ws_arm/src/moveit_arm /home/xianyu/ws_arm/src/moveit_arm /home/xianyu/ws_arm/build/moveit_arm /home/xianyu/ws_arm/build/moveit_arm /home/xianyu/ws_arm/build/moveit_arm/CMakeFiles/moveit_arm_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xianyu/Moveit2/build/moveit_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xianyu/Moveit2/src/moveit_arm /home/xianyu/Moveit2/src/moveit_arm /home/xianyu/Moveit2/build/moveit_arm /home/xianyu/Moveit2/build/moveit_arm /home/xianyu/Moveit2/build/moveit_arm/CMakeFiles/moveit_arm_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/moveit_arm_uninstall.dir/depend
 

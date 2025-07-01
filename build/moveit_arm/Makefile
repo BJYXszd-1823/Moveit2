@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xianyu/ws_arm/src/moveit_arm
+CMAKE_SOURCE_DIR = /home/xianyu/Moveit2/src/moveit_arm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xianyu/ws_arm/build/moveit_arm
+CMAKE_BINARY_DIR = /home/xianyu/Moveit2/build/moveit_arm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xianyu/ws_arm/build/moveit_arm/CMakeFiles /home/xianyu/ws_arm/build/moveit_arm//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xianyu/Moveit2/build/moveit_arm/CMakeFiles /home/xianyu/Moveit2/build/moveit_arm//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xianyu/ws_arm/build/moveit_arm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xianyu/Moveit2/build/moveit_arm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

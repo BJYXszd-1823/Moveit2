@@ -79,10 +79,10 @@ def generate_launch_description():
     )
 
     # 路径执行控制器，也就是那个action？
-    # 这个my_group_controller需要根据urdf文件里面引用的ros2_controllers.yaml里面的名字确定
+    # 这个test_controller需要根据urdf文件里面引用的ros2_controllers.yaml里面的名字确定
     load_joint_trajectory_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
-             'my_group_controller'],
+             'test_controller'],
         output='screen'
     )
 

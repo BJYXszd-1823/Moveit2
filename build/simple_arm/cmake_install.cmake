@@ -1,8 +1,8 @@
-# Install script for directory: /home/xianyu/ws_arm/src/simple_arm
+# Install script for directory: /home/xianyu/Moveit2/src/simple_arm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xianyu/ws_arm/install/simple_arm")
+  set(CMAKE_INSTALL_PREFIX "/home/xianyu/Moveit2/install/simple_arm")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,20 +44,20 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE DIRECTORY FILES
-    "/home/xianyu/ws_arm/src/simple_arm/images"
-    "/home/xianyu/ws_arm/src/simple_arm/launch"
-    "/home/xianyu/ws_arm/src/simple_arm/meshes"
-    "/home/xianyu/ws_arm/src/simple_arm/rviz"
-    "/home/xianyu/ws_arm/src/simple_arm/urdf"
+    "/home/xianyu/Moveit2/src/simple_arm/images"
+    "/home/xianyu/Moveit2/src/simple_arm/launch"
+    "/home/xianyu/Moveit2/src/simple_arm/meshes"
+    "/home/xianyu/Moveit2/src/simple_arm/rviz"
+    "/home/xianyu/Moveit2/src/simple_arm/urdf"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/simple_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/simple_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/simple_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/simple_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -65,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm/environment" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm/environment" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -73,42 +73,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm/environment" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm/environment" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_index/share/ament_index/resource_index/packages/simple_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_index/share/ament_index/resource_index/packages/simple_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm/cmake" TYPE FILE FILES
-    "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_core/simple_armConfig.cmake"
-    "/home/xianyu/ws_arm/build/simple_arm/ament_cmake_core/simple_armConfig-version.cmake"
+    "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_core/simple_armConfig.cmake"
+    "/home/xianyu/Moveit2/build/simple_arm/ament_cmake_core/simple_armConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/ws_arm/src/simple_arm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_arm" TYPE FILE FILES "/home/xianyu/Moveit2/src/simple_arm/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -119,5 +119,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xianyu/ws_arm/build/simple_arm/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/xianyu/Moveit2/build/simple_arm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
