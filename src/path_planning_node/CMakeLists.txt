@@ -39,10 +39,19 @@ ament_target_dependencies(
   tf2_geometry_msgs
 )
 
+add_library(${PROJECT_NAME} SHARED src/path_planner.cpp)
+ament_target_dependencies(
+  ${PROJECT_NAME}
+  rclcpp
+  moveit_msgs
+  geometry_msgs
+  tf2
+  tf2_geometry_msgs
+)
 # 安装可执行文件
 install(TARGETS
-  path_planner
-  DESTINATION lib/${PROJECT_NAME}
+  path_planner ${PROJECT_NAME}
+  DESTINATION lib
 )
 
 # 安装头文件
@@ -52,6 +61,7 @@ install(
 )
 
 ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(moveit_msgs)
 ament_export_dependencies(geometry_msgs)

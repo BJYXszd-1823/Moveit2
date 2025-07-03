@@ -19,7 +19,7 @@
   <!-- <depend>visualization_msgs</depend> -->
   <depend>auto_aim_interfaces</depend>
   <depend>rm_interfaces</depend>
- 
+  <build_depend>path_planning_node</build_depend>
   <!-- <depend>std_srvs</depend> -->
 
   <depend>moveit_core</depend>

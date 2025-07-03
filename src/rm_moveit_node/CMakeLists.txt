@@ -8,7 +8,7 @@ include_directories(
 )
 
 ## Use C++14
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ## By adding -Wall and -Werror, the compiler does not ignore warnings anymore,
@@ -17,6 +17,7 @@ add_definitions(-Wall -Werror)
 
 ## Export compile commands for clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 #######################
 ## Find dependencies ##
@@ -54,7 +55,9 @@ ament_target_dependencies(${PROJECT_NAME}
   moveit_ros_planning_interface
   moveit_msgs
   rm_interfaces  # 如果需要rm_interfaces消息
+  path_planning_node
 )
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -15,6 +15,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <sstream>
 
 #include "rm_serial_driver/crc.hpp"
 #include "rm_serial_driver/packet.hpp"
@@ -32,13 +33,14 @@ namespace rm_serial_driver
     getParams();
 
     // TF broadcaster
-    timestamp_offset_ = this->declare_parameter("timestamp_offset", 0.0);
-    tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
+    // timestamp_offset_ = this->declare_parameter("timestamp_offset", 0.0);
+    // tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
     // 创建客户端，用于向MoveIt节点发送请求
     auto client = this->create_client<rm_interfaces::srv::ArmData>("arm_data");
     rm_serial_driver::RMSerialDriver::SetArmClient set_arm_client(client);
     std::string service_name = client->get_service_name();
+    RCLCPP_INFO(get_logger(), "Waiting for service: %s", service_name.c_str());
     arm_data_clients_.emplace(std::move(service_name), std::move(set_arm_client));
 
     // 正式代码需要
@@ -57,11 +59,6 @@ namespace rm_serial_driver
           get_logger(), "Error creating serial port: %s - %s", device_name_.c_str(), ex.what());
       throw ex;
     }
-
-    // Create Subscription
-    target_sub_ = this->create_subscription<rm_interfaces::msg::GimbalCmd>(
-        "rune_solver/cmd_gimbal", rclcpp::SensorDataQoS(),
-        std::bind(&RMSerialDriver::sendData, this, std::placeholders::_1));
   }
 
   RMSerialDriver::~RMSerialDriver()
@@ -94,7 +91,7 @@ namespace rm_serial_driver
       {
         serial_driver_->port()->receive(header);
 
-        if (header[0] == 0xB6)
+        if (header[0] == 0x5A)
         {
           data.resize(sizeof(ReceivePacket) - 1);
           serial_driver_->port()->receive(data);
@@ -146,14 +143,7 @@ namespace rm_serial_driver
                           {
                             RCLCPP_INFO(get_logger(), "Received joint angles successfully!");
                             // 发送关节角度到串口
-                            rm_interfaces::msg::GimbalCmd::SharedPtr msg = std::make_shared<rm_interfaces::msg::GimbalCmd>();
-                            msg->joint_angles[0] = arm_response->joint_angles[0];
-                            msg->joint_angles[1] = arm_response->joint_angles[1];
-                            msg->joint_angles[2] = arm_response->joint_angles[2];
-                            msg->joint_angles[3] = arm_response->joint_angles[3];
-                            msg->joint_angles[4] = arm_response->joint_angles[4];
-                            msg->joint_angles[5] = arm_response->joint_angles[5];
-                            sendData(msg);
+                            sendData(arm_response);
                           }
                           else
                           {
@@ -182,17 +172,6 @@ namespace rm_serial_driver
                 RCLCPP_ERROR(get_logger(), "No MoveIt service client available");
               }
             }
-
-            // 发布TF变换
-            geometry_msgs::msg::TransformStamped t;
-            timestamp_offset_ = this->get_parameter("timestamp_offset").as_double();
-            t.header.stamp = this->now() + rclcpp::Duration::from_seconds(timestamp_offset_);
-            t.header.frame_id = "odom";
-            t.child_frame_id = "gimbal_link";
-            tf2::Quaternion q;
-            q.setRPY(packet.roll, packet.pitch, packet.yaw);
-            t.transform.rotation = tf2::toMsg(q);
-            tf_broadcaster_->sendTransform(t);
           }
           else
           {
@@ -213,27 +192,34 @@ namespace rm_serial_driver
     }
   }
 
-  void RMSerialDriver::sendData(rm_interfaces::msg::GimbalCmd::SharedPtr msg)
+  void RMSerialDriver::sendData(const std::shared_ptr<rm_interfaces::srv::ArmData::Response> response)
   {
     try
     {
       SendPacket packet;
       packet.start = 0xA5;
 
-      // 确保关节角度数量足够
-      if (msg->joint_angles.size() >= 6)
+      std::stringstream ss;
+      for (auto &joint : response->joint_angles)
       {
-        packet.joint1 = msg->joint_angles[0];
-        packet.joint2 = msg->joint_angles[1];
-        packet.joint3 = msg->joint_angles[2];
-        packet.joint4 = msg->joint_angles[3];
-        packet.joint5 = msg->joint_angles[4];
-        packet.joint6 = msg->joint_angles[5];
+        ss << joint << " ";
+      }
+      RCLCPP_INFO(get_logger(), "ArmData: %s", ss.str().c_str());
+
+      // 确保关节角度数量足够
+      if (response->joint_angles.size() >= 6)
+      {
+        packet.joint1 = response->joint_angles[0];
+        packet.joint2 = response->joint_angles[1];
+        packet.joint3 = response->joint_angles[2];
+        packet.joint4 = response->joint_angles[3];
+        packet.joint5 = response->joint_angles[4];
+        packet.joint6 = response->joint_angles[5];
       }
       else
       {
         RCLCPP_ERROR(this->get_logger(), "Insufficient joint angles (expected 6, got %zu)",
-                     msg->joint_angles.size());
+                     response->joint_angles.size());
         packet.joint1 = 0.0;
         packet.joint2 = 0.0;
         packet.joint3 = 0.0;
@@ -247,6 +233,7 @@ namespace rm_serial_driver
 
       // 发送数据
       std::vector<uint8_t> data = toVector(packet);
+
       serial_driver_->port()->send(data);
     }
     catch (const std::exception &ex)

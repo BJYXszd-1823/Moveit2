@@ -6,28 +6,23 @@
 #include <geometry_msgs/msg/pose.hpp>
 #include <mutex>
 #include "rm_interfaces/srv/arm_data.hpp"
+#include <geometry_msgs/msg/pose_stamped.hpp>
 
+#include "path_planning_node/path_planner.hpp"
 class MoveItNode : public rclcpp::Node
 {
 public:
   MoveItNode();
 
 private:
-
-  void initMoveGroup();
+  std::shared_ptr<PathPlanner> planner_;
   void handleMotionRequest(
-    const std::shared_ptr<rm_interfaces::srv::ArmData::Request> request,
-    std::shared_ptr<rm_interfaces::srv::ArmData::Response> response);
+      const std::shared_ptr<rm_interfaces::srv::ArmData::Request> request,
+      std::shared_ptr<rm_interfaces::srv::ArmData::Response> response);
 
-  bool planTrajectory(const geometry_msgs::msg::Pose& target_pose, 
-                     moveit::planning_interface::MoveGroupInterface::Plan& plan);
-                     
-  bool executeTrajectory(const moveit::planning_interface::MoveGroupInterface::Plan& plan);
-  
-  std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group_;
+  bool planTrajectory(const std::shared_ptr<rm_interfaces::srv::ArmData::Request> request);
   rclcpp::Service<rm_interfaces::srv::ArmData>::SharedPtr service_;
-  bool is_initialized_ = false;
   std::mutex planning_mutex_;
 };
 
-#endif  // RM_MOVEIT_NODE_HPP_
+#endif // RM_MOVEIT_NODE_HPP_
