@@ -1,0 +1,8 @@
+rm_moveit_node:
+  ros__parameters:
+    group_name: "test"  # 根据实际情况修改规划组名称
+    planning_time: 5.0
+    num_planning_attempts: 3
+    fake_execution: false
+    max_velocity_scaling_factor: 0.5
+    max_acceleration_scaling_factor: 0.5

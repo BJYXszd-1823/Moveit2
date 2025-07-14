@@ -65,13 +65,13 @@ case $TARGET in
         ros2 launch $TARGET gazebo.launch.py -d -a 2>&1 | tee ${TARGET_LOG}/$(date +%Y%m%d%H%M%S).log
         ;;
     "moveit_arm")
-        killall ros2
-        killall gzserver
-        killall gzclient
-        killall rviz2
-        ros2 launch $TARGET gazebo.launch.py -d 2>&1 | tee ${TARGET_LOG}/gazebo_$(date +%Y%m%d%H%M%S).log
+        ros2 launch $TARGET demo.launch.py -d 2>&1 | tee ${TARGET_LOG}/$(date +%Y%m%d%H%M%S).log
         # sleep 5
         # ros2 launch $TARGET my_moveit_rviz.launch.py -d -a 2>&1 | tee ${TARGET_LOG}/rviz_$(date +%Y%m%d%H%M%S).log &
+        ;;
+    "rm_serial_driver")
+        # sudo socat -d -d PTY,raw,echo=0,link=/dev/ttyS1,perm=0666 PTY,raw,echo=0,link=/dev/ttyS2,perm=0666 &
+        ros2 launch $TARGET serial_driver.launch.py -d -a 2>&1 | tee ${TARGET_LOG}/$(date +%Y%m%d%H%M%S).log
         ;;
     *)
         ros2 launch $TARGET demo.launch.py -d -a 2>&1 | tee ${TARGET_LOG}/$(date +%Y%m%d%H%M%S).log

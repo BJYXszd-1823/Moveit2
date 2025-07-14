@@ -1,0 +1,17 @@
+std_msgs/Header header
+# float64 pitch
+# float64 yaw_diff
+# float64 pitch_diff
+# float64 distance
+# bool fire_advice
+# bool tracking
+# string id
+# int32 armors_num
+# geometry_msgs/Point position
+# geometry_msgs/Vector3 velocity
+# float64 yaw
+# float64 v_yaw
+# float64 radius_1
+# float64 radius_2
+# float64 dz
+float64[] joint_angles

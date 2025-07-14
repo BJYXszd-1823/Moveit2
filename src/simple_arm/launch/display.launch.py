@@ -80,7 +80,7 @@ def generate_launch_description():
         output='screen',
         arguments=['-d', LaunchConfiguration('rvizconfig')],
         condition=IfCondition(LaunchConfiguration('use_rviz')),
-        parameters=[{'use_sim_time': False}]
+        parameters=[{'use_sim_time': True}]
     )
 
     return LaunchDescription([
